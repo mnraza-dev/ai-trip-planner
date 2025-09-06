@@ -1,7 +1,7 @@
 import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { ArrowDown, Globe2, Globe2Icon, Landmark, Plane, PlaneTakeoffIcon, Send, Share2Icon, } from 'lucide-react'
+import { ArrowDown, Globe2, Landmark, Plane, Send } from 'lucide-react'
 import React from 'react'
 const suggestions = [
     {
@@ -26,7 +26,6 @@ const suggestions = [
     }
 ]
 const Hero = () => {
-
     return (
         <div className='flex justify-center items-center p-4'>
             {/* Content */}
@@ -65,7 +64,6 @@ const Hero = () => {
                     thumbnailAlt="Dummy Video Thumbnail"
                 />
             </div>
-
         </div>
     )
 }
