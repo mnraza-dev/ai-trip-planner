@@ -11,7 +11,8 @@ const Header = () => {
         { id: 3, name: 'Contact', path: '/contact' },
     ]
     return (
-        <div className='flex justify-between items-center p-4 border-b bg-amber-100 z-30 w-full'>
+        <header className='sticky top-0 left-0 backdrop-blur-lg flex justify-between items-center p-4 border-b  bg-white/70 dark:bg-neutral-900/40
+        backdrop-saturate-150 z-30 w-full supports-[backdrop-filter]:backdrop-blur-lg  drop-shadow-2xl supports-[backdrop-filter]:bg-white/60'>
             {/* Logo */}
             <div className=' '>
                 <Image src='/images/logo.svg' alt='logo' width={200} height={40} className='inline mr-2' />
@@ -29,7 +30,7 @@ const Header = () => {
             <div className=''>
                 <Button variant={"default"} className=''>Get Started</Button>
             </div>
-        </div>
+        </header>
     )
 }
 
