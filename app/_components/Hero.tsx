@@ -41,7 +41,7 @@ const Hero = () => {
                 </div>
 
                 {/* Suggestion List */}
-                <div className='flex gap-4'>
+                <div className='flex gap-4 flex-wrap'>
                     {suggestions.map((suggestion) => (
                         <div key={suggestion.id}
                             className='
