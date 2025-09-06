@@ -1,4 +1,4 @@
-export const suggestions = [{
+export const suggestionsList = [{
     title: "Create a budget-friendly itinerary for Japan",
     description: "Explore the best budget options for traveling in Japan."
 },
