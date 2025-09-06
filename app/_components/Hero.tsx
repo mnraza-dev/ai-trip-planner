@@ -1,7 +1,10 @@
+"use client"
 import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+import { useUser } from '@clerk/nextjs'
 import { ArrowDown, Globe2, Landmark, Plane, Send } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 const suggestions = [
     {
@@ -26,11 +29,21 @@ const suggestions = [
     }
 ]
 const Hero = () => {
+    const user = useUser();
+    const router = useRouter();
+    const onSend = () => {
+        if (!user.isSignedIn) {
+            router.push('/sign-in');
+            return;
+        }
+        // Handle the send action here
+    };
+
     return (
         <div className='flex justify-center items-center p-4'>
             {/* Content */}
             <div className='max-w-3xl w-full space-y-6  p-4 '>
-                <h1 className='text-xl md:text-5xl text-center font-semibold leading-tight'>Hey, I'm Your Personal  <br /><span className='text-primary font-bold'>AI Trip Planner</span></h1>
+                <h1 className='text-xl md:text-5xl text-center font-semibold leading-tight'>Hey {user.user?.firstName}, I'm Your Personal  <br /><span className='text-primary font-bold'>AI Trip Planner</span></h1>
                 <p className='text-lg'>Plan your perfect trip with the power of AI. Get personalized itineraries, travel tips, and more!</p>
                 {/* Input Box */}
                 <div className='flex flex-col border-2 border-amber-300 rounded-2xl p-4 '>
