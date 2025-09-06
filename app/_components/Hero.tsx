@@ -52,7 +52,7 @@ const Hero = () => {
                         </div>
                     ))}
                 </div>
-                <div className='flex justify-center'>
+                <div className='flex flex-col items-center justify-center'>
                     <h2 className='text-3xl mt-8 flex gap-2 text-center'>Not Sure Where to Start?  <span className='text-primary'><strong> See how it works </strong></span><ArrowDown className='text-primary h-12 w-8' /></h2>
 
                 </div>
@@ -60,8 +60,8 @@ const Hero = () => {
                 <HeroVideoDialog
                     className="block dark:hidden"
                     animationStyle="from-center"
-                    videoSrc="https://www.example.com/dummy-video"
-                    thumbnailSrc="https://www.example.com/dummy-thumbnail.png"
+                    videoSrc="https://youtu.be/0iDvK0zDFoo"
+                    thumbnailSrc="https://i9.ytimg.com/vi_webp/0iDvK0zDFoo/maxresdefault.webp?v=63cbcab2&sqp=CJy678UG&rs=AOn4CLC_Grr_v2kFsK6NWkzUrVUk0QgDHQ"
                     thumbnailAlt="Dummy Video Thumbnail"
                 />
             </div>
