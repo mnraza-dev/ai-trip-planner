@@ -1,27 +1,27 @@
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { Globe2, PlaneTakeoffIcon, Send, Share2Icon, } from 'lucide-react'
+import { Globe2, Globe2Icon, Landmark, Plane, PlaneTakeoffIcon, Send, Share2Icon, } from 'lucide-react'
 import React from 'react'
 const suggestions = [
     {
         id: 1,
         title: "Create New Trip",
-        icon: <Globe2 className='text-blue-500 h-5 w-5' />,
+        icon: <Globe2 className='text-blue-500 h-5 w-5 hover:text-white' />,
     },
     {
         id: 2,
-        title: "View Past Trips",
-        icon: <PlaneTakeoffIcon className='text-green-500 h-5 w-5' />,
+        title: "Inspire Me Where to Go",
+        icon: <Plane className='text-green-500 h-5 w-5 hover:text-white' />,
     },
     {
         id: 3,
-        title: "Get Travel Tips",
-        icon: <Globe2 className='text-purple-500 h-5 w-5' />,
+        title: "Discover Hidden Gems",
+        icon: <Landmark className='text-purple-500 h-5 w-5 hover:text-white' />,
     },
     {
         id: 4,
-        title: "Explore Destinations",
-        icon: <Share2Icon className='text-red-500 h-5 w-5' />,
+        title: "Adventure Destinations",
+        icon: <Globe2 className='text-red-500 h-5 w-5 hover:text-white' />,
     }
 ]
 const Hero = () => {
