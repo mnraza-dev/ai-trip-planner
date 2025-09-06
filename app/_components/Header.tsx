@@ -1,10 +1,13 @@
 import { Button } from '@/components/ui/button'
+import { SignInButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import path from 'path'
 import React from 'react'
 
 const Header = () => {
+
+
     const menuOptions = [
         { id: 1, name: 'Home', path: '/' },
         { id: 2, name: 'Pricing', path: '/pricing' },
@@ -28,8 +31,15 @@ const Header = () => {
             </div>
             {/* Get Started Button */}
             <div className=''>
-                <Button variant={"default"} className=''>Get Started</Button>
+
+                <SignInButton mode='modal'>
+                    <Button variant={"default"} className=''>Get Started</Button>
+                </SignInButton>
+                
+
             </div>
+
+
         </header>
     )
 }
