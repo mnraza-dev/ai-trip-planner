@@ -1,6 +1,7 @@
+import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { Globe2, Globe2Icon, Landmark, Plane, PlaneTakeoffIcon, Send, Share2Icon, } from 'lucide-react'
+import { ArrowDown, Globe2, Landmark, Plane, Send } from 'lucide-react'
 import React from 'react'
 const suggestions = [
     {
@@ -25,12 +26,11 @@ const suggestions = [
     }
 ]
 const Hero = () => {
-
     return (
         <div className='flex justify-center items-center p-4'>
             {/* Content */}
             <div className='max-w-3xl w-full space-y-6  p-4 '>
-                <h1 className='text-xl md:text-5xl text-center font-bold'>Hey, I'm Your <span className='text-primary'>Personal Trip Planner</span></h1>
+                <h1 className='text-xl md:text-5xl text-center font-semibold leading-tight'>Hey, I'm Your Personal  <br /><span className='text-primary font-bold'>AI Trip Planner</span></h1>
                 <p className='text-lg'>Plan your perfect trip with the power of AI. Get personalized itineraries, travel tips, and more!</p>
                 {/* Input Box */}
                 <div className='flex flex-col border-2 border-amber-300 rounded-2xl p-4 '>
@@ -51,9 +51,19 @@ const Hero = () => {
                         </div>
                     ))}
                 </div>
-                {/* Video Section */}
-            </div>
+                <div className='flex flex-col items-center justify-center'>
+                    <h2 className='text-3xl mt-8 flex gap-2 text-center'>Not Sure Where to Start?  <span className='text-primary'><strong> See how it works </strong></span><ArrowDown className='text-primary h-12 w-8' /></h2>
 
+                </div>
+                {/* Video Section */}
+                <HeroVideoDialog
+                    className="block dark:hidden"
+                    animationStyle="from-center"
+                    videoSrc="https://youtu.be/0iDvK0zDFoo"
+                    thumbnailSrc="https://i9.ytimg.com/vi_webp/0iDvK0zDFoo/maxresdefault.webp?v=63cbcab2&sqp=CJy678UG&rs=AOn4CLC_Grr_v2kFsK6NWkzUrVUk0QgDHQ"
+                    thumbnailAlt="Dummy Video Thumbnail"
+                />
+            </div>
         </div>
     )
 }
